@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=Play&family=Rajdhani:wght@400;500&family=Varela+Round&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="contact.css">
+    </head>
+    <body>
+        <!--button for the lights-->
+        <button id="mode-toggle" class="mode-toggle">Toggle Dark Mode</button>
+        <div class="container">
+            <h1> Contact Us </h1>
+            <p> May tanong ka? Tanong mo kay Trishia </p>
+            <form action="mail.php" method="post">
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" required>
+
+                <label for="gmail">Gmail: </label>
+                <input type="text" name="gmail" id="gmail" required>
+
+                <label for="subject">Subject: </label>
+                <input type="text" name="subject" id="subject" required>
+
+                <label for="message">Message: </label>
+                <textarea name="message" cols="30" rows="10" required></textarea>
+                <input type="submit" value="Send" a href="contend.html">
+            </form>
+        </div>
+        <!--script for lights-->
+        <script>
+            const toggleButton = document.getElementById('mode-toggle');
+            const body = document.body;
+
+            toggleButton.addEventListener('click', () => {
+                body.classList.toggle('light-mode');
+
+                // Change button text based on mode
+                if (body.classList.contains('light-mode')) {
+                    toggleButton.textContent = 'Dark Mode';
+                } else {
+                    toggleButton.textContent = 'Light Mode';
+                }
+            });
+        </script>
+    </body>
+</html>

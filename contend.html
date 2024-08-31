@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=Play&family=Rajdhani:wght@400;500&family=Varela+Round&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="contact.css">
+        <button id="mode-toggle" class="mode-toggle">Dark Mode</button>
+        <!--for GIF-->
+        <style>
+            .tenor-gif-embed {
+                width: 25px; /* Make the GIF smaller */
+                height: auto; /* Maintain aspect ratio */
+                max-width: 25%; /* Ensure it doesn't exceed the container's width */
+                display: block; /* Ensure it behaves as a block element */
+                margin: 20px auto; /* Center the GIF horizontally and add space around it */
+                border-radius: 50px;
+            }
+            /* Ensure container has enough padding */
+            .container {
+                padding-bottom: 20px; /* Add some padding at the bottom if needed */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1> Thank you for contacting us! </h1>
+            <p> Chat nyo na si Trishia, naghahanap daw sya Engineer. </p>
+            <p class="back"> Go back to the <a href="index.html" style=color:grey font-weight: bold; >profile</a></p>
+            <div class="tenor-gif-embed" data-postid="15561163" data-share-method="host" data-aspect-ratio="1.23552" data-width="100%">
+                <a href="https://tenor.com/view/thanks-cute-thank-you-gif-15561163">Thanks Cute Sticker</a>from <a href="https://tenor.com/search/thanks-stickers">Thanks Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+        <!--For lights-->
+        <script>
+            const toggleButton = document.getElementById('mode-toggle');
+            const body = document.body;
+
+            toggleButton.addEventListener('click', () => {
+                body.classList.toggle('light-mode');
+
+                // Change button text based on mode
+                if (body.classList.contains('light-mode')) {
+                    toggleButton.textContent = 'Dark Mode';
+                } else {
+                    toggleButton.textContent = 'Light Mode';
+                }
+            });
+        </script>
+    </body>
+</html>
